@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac42d48e673e455fb9c6598d5445fa24" Name="Diagram1">
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.BugAttribute" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.EnhancementAttribute" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.TaskAttribute" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.Ticket" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.TicketType" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.User" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TicketingSystem_JRAModel.WatchingUser" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Bug_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Enhance_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Task_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Assigned_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Submit_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Tickets_TicketType" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Watching_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="TicketingSystem_JRAModel.FK_Watching_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
