@@ -25,10 +25,12 @@ namespace Client
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
+
+            app.UseDefaultFiles(new DefaultFilesOptions
             {
-                await context.Response.WriteAsync("Hello World!");
+                DefaultFileNames = new List<string> { "index.html" }
             });
+            app.UseStaticFiles();
         }
     }
 }
