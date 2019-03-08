@@ -8,10 +8,14 @@ namespace ConsoleApp13
 {
     public class MovieDB
     {
-            List <MovieDB> the_movies = new List<MovieDB> {
-            new MovieDB() {"A Hard Day's Night (1964)", Rating.G, Genre.MUSICALS },
-            new Movie("All Quiet on the Western Front (1930)", Rating.NR, Genre.WAR),
-            new Movie("Argo (2012)", Rating.R, Genre.WAR),
+
+        public MovieDB()
+        {
+          
+        }
+        MovieDB the_movies = new MovieDB();
+       the_movies.Add("Argo (2012)", Rating.R, Genre.WAR)
+            new Movie(),
             new Movie("Baby Driver (2017)", Rating.R, Genre.ACTION),
             new Movie("Black Panther (2018)", Rating.PG13, Genre.SCIFI),
             new Movie("Captain America: Civil War (2016)", Rating.PG13, Genre.SCIFI),
@@ -47,21 +51,21 @@ namespace ConsoleApp13
             new Movie("Wonder Woman (2017)", Rating.PG13, Genre.ACTION)
     };
 
-            List<Movie> movies = new ArrayList<Movie>(Arrays.asList(the_movies));
-
-            List<Movie> getAllMovies()
+    IList<Movie> movies = new the_movies.ToList();
+    
+    public List<MovieDB> getAllMovies()
             {
                 return movies;
             }
 
-            List<Movie> getAllMoviesByRating(Rating r)
+            public List<Movie> getAllMoviesByRating(Rating r)
             {
                 List<Movie> moviesByRating = new ArrayList<Movie>();
                 foreach (Movie m in movies)
                 {
-                    if (m.getRating().equals(r))
+                    if (m.getRating().Equals(r))
                     {
-                        moviesByRating.add(m);
+                        moviesByRating.Add(m);
                     }
                 }
                 return moviesByRating;
@@ -72,9 +76,9 @@ namespace ConsoleApp13
                 List<Movie> moviesByGenre = new ArrayList<Movie>();
                 foreach (Movie m in movies)
                 {
-                    if (m.getGenre().equals(g))
+                    if (m.getGenre().Equals(g))
                     {
-                        moviesByGenre.add(m);
+                        moviesByGenre.Add(m);
                     }
                 }
                 return moviesByGenre;
@@ -96,7 +100,6 @@ namespace ConsoleApp13
                 return message;
             }
 
-        }
+ }
 
-    }
-}
+ 

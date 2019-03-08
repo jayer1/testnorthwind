@@ -10,29 +10,31 @@ namespace ConsoleApp13
     {
         public static void Main(string[] args)
         {
-            MovieDB movieDB = new MovieDB();
+            MovieDB the_movies = new MovieDB();
             ConsoleUI con = ConsoleUI.getUI();
-            boolean moreTasks = true;
+            bool moreTasks = true;
 
             do
             {
                 Choices choice = con.getChoice();
                 switch (choice)
                 {
-                    case "LIST":
-                        con.outputMovies(movieDB.getAllMovies());
+                    case Choices.LIST:
+                        con.outputMovies(the_movies.getAllMovies());
                         break;
-                    case "BYRATING":
-                        con.outputMovies(movieDB.getAllMoviesByRating(con.getRating()));
+                    case Choices.BYRATING:
+                        con.outputMovies(MovieDB.getAllMoviesByRating(con.getRating()));
                         break;
-                    case "BYGENRE":
-                        con.outputMovies(movieDB.getAllMoviesByGenre(con.getGenre()));
+                    case Choices.BYGENRE:
+                        con.outputMovies(MovieDB.getAllMoviesByGenre(con.getGenre()));
                         break;
-                    case "DELETE":
-                        Console.WriteLine(movieDB.deleteMovieByIndex(con.getMovieToDelete(movieDB.getAllMovies())));
+                    case Choices.DELETE:
+                        Console.WriteLine(MovieDB.deleteMovieByIndex(con.getMovieToDelete(MovieDB.getAllMovies())));
                         break;
-                    case "EXIT":
+                    case Choices.EXIT:
                         moreTasks = false;
+                    default:
+
                 }
             } while (moreTasks);
 

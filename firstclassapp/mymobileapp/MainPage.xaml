@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:mymobileapp"
+             x:Class="mymobileapp.MainPage">
+
+    <StackLayout>
+
+        <!--<Label Text="Avoid triggering the bomb!" 
+            HorizontalOptions="Center"
+           VerticalOptions="Center" />
+        
+        <Button Text="1"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="ButtonClicked"/>
+
+        <Button Text="2"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="ButtonClicked"/>
+        
+        <Button Text="3"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="ButtonClicked"/>
+        
+        <Label Text="Created by Jason!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />-->
+
+        <Button Text="Click Me" Clicked="ButtonClicked" />
+    </StackLayout>
+</ContentPage>

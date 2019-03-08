@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MorseCodeApp"
+             Title="Static Constants Page"
+             Padding="{x:Static local:AppConstants.PagePadding}"
+             x:Class="MorseCodeApp.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="horzOptions"
+                           Alignment="Center" />
+            
+            <OnPlatform x:Key="textColor"
+                            x:TypeArguments="Color">
+                <On Platform="iOS" Value="Green" />
+                <On Platform="Android" Value="Green" />
+                <On Platform="UWP" Value="#00A0A0" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to the Morse Code App!" 
+           HorizontalOptions="Center"
+           TextColor="{StaticResource textColor}"
+           VerticalOptions="CenterAndExpand" />
+        <!--<Editor x:Name="editor"
+                Placeholder="Start tapping"
+                HeightRequest="100" />-->
+        <Entry  x:Name="entryLetter"
+                Placeholder="Converted text"
+                Completed="OnEntryCompleted" />
+        <ContentView BackgroundColor="LightGray"
+                     Margin="10"
+                     Padding="25"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="CenterAndExpand">
+            
+            <Entry  x:Name="entry"
+                Placeholder="Enter morse code"
+                TextChanged="OnEntryTextChanged"
+                Completed="OnEntryCompleted" />
+        </ContentView>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="DOT ."
+                   TextColor="{StaticResource textColor}" 
+                    HorizontalOptions="{StaticResource horzOptions}"
+                    Clicked="OnDotClicked" />
+            <Button Grid.Column="1"
+                    Text="DASH -"
+                    TextColor="{StaticResource textColor}" 
+                    HorizontalOptions="{StaticResource horzOptions}"
+                    Clicked="OnDashClicked"/>
+
+        </Grid>
+            <Button Text="Space"
+                   TextColor="{StaticResource textColor}" 
+                    HorizontalOptions="{StaticResource horzOptions}"
+                    Clicked="OnSpaceClicked"/>
+    </StackLayout>
+
+</ContentPage>

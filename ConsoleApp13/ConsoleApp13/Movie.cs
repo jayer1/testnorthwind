@@ -73,7 +73,7 @@ namespace ConsoleApp13
 
         public override int GetHashCode()
         {
-            return Objects.GetHashCode(getName(), getRating(), getGenre());
+            return Objects.GetHashCode();
         }
 
       
