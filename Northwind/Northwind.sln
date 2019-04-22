@@ -1,9 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind", "WebApplication5\Northwind.csproj", "{D746BE4C-EEBD-40A9-95BE-B73CE204CAD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind", "Northwind.csproj", "{A4E5D30D-E250-4198-B824-41B755AC5A62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +9,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D746BE4C-EEBD-40A9-95BE-B73CE204CAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D746BE4C-EEBD-40A9-95BE-B73CE204CAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D746BE4C-EEBD-40A9-95BE-B73CE204CAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D746BE4C-EEBD-40A9-95BE-B73CE204CAD7}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B10F40F7-1089-4A80-A3B6-BDE8F44813CD}
+		{A4E5D30D-E250-4198-B824-41B755AC5A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E5D30D-E250-4198-B824-41B755AC5A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E5D30D-E250-4198-B824-41B755AC5A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E5D30D-E250-4198-B824-41B755AC5A62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

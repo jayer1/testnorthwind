@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Questionaire"
+             x:Class="Questionaire.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <Image x:Name ="MyImage"
+               WidthRequest="30"/>
+
+        <Label Text="Question/Result" 
+               x:Name="QuestionResult"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Answer1"
+                    x:Name="Answer1"
+                    FontSize="10"
+                    Clicked="OnAnswer1Clicked" />
+            <Button Text="Answer2"
+                    x:Name="Answer2"
+                    FontSize="10"
+                    Grid.Column="1"
+                    Clicked="OnAnswer2Clicked"/>
+        </Grid>
+        <Grid>
+            <Button Text="Answer3"
+                    x:Name="Answer3"
+                    FontSize="10"
+                    Clicked="OnAnswer3Clicked"/>
+            <Button Text="Answer4"
+                    x:Name="Answer4"
+                    FontSize="10"
+                    Grid.Column="1"
+                    Clicked="OnAnswer4Clicked"/>
+        </Grid>
+        <Button Text="Start"
+                    x:Name="Start"
+                    Clicked="OnStartClicked"/>
+        <Image x:Name ="MyImage2"
+               WidthRequest="100"/>
+        <Image x:Name ="MyImage3"
+               WidthRequest="100"/>
+        <Image x:Name ="Sylar"
+               WidthRequest="100"/>
+        <Image x:Name ="Batman"
+               WidthRequest="100"/>
+        <Image x:Name ="NotAHero"
+               WidthRequest="100"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿@using Northwind.Models
+@model IEnumerable<Order>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col" class="text-right">Order Date</th>
+            <th scope="col" class="text-right">Shipped Date</th>
+            <th scope="col" class="text-right">Required Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Order o in Model)
+        {
+            <tr>
+                <td>@o.OrderID</td>
+                <td class="text-right">@o.OrderDate</td>
+                <td class="text-right">@o.ShippedDate</td>
+                <td class="text-right">@o.RequiredDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="navbar-brand" asp-controller="Order" asp-action="Next"><i class="far fa-compass"></i> Next</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>

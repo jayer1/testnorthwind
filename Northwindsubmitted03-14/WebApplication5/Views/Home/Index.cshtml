@@ -1,0 +1,58 @@
+﻿<!-- toast -->
+<div id="toast" class="toast">
+    <div class="toast-header">
+        <strong class="mr-auto" id="product">Product Name</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Discount Code: <strong id="code">CODE</strong>
+    </div>
+</div>
+
+<div class="jumbotron my-2">
+    <h1 class="display-4">Northwind</h1>
+    <p class="lead">We have the best prices and selection of high quality foods &amp; beverages on the planet! Check out our featured discounts below.</p>
+    <hr class="my-4">
+    <p>For exceptional international cuisine, look no further.</p>
+    <a class="btn btn-outline-primary btn-lg" href="#" role="button"><i class="fas fa-shopping-cart"></i> Order Now</a>
+</div>
+
+<div class="row">
+    <div class="col-md m-3 p-3 discounts">
+        <h2>Tis the seasoning</h2>
+        <div class="mb-4">
+            Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+            You don't want to make Chef Anton mad, do you?
+        </div>
+
+        <p>Discount expires: 4/15/2019</p>
+        <a href="#" class="code" data-code="4444" data-product="Tis the Seasoning"><i class="far fa-hand-point-right"></i> Discount Code</a>
+    </div>
+
+    <div class="col-md m-3 p-3 discounts">
+        <h2>Go Green</h2>
+        <div class="mb-4">
+            Genen Shouyu goes on sale very rarely.
+            Order now to save 10% off our already low price.
+        </div>
+
+        <p>Discount expires: 4/15/2019</p>
+        <a href="#" class="code" data-code="1515" data-product="Go Green"><i class="far fa-hand-point-right"></i> Discount Code</a>
+    </div>
+
+    <div class="col-md m-3 p-3 discounts">
+        <h3 id="sound">Half Price</h3>
+        <div class="mb-4">
+            Just because you can't pronounce "Schoggi Schokolde" doesn't mean you shouldn't buy it.
+            Get it now for 50% off!
+        </div>
+
+        <p>Discount expires: 4/15/2019</p>
+        <a href="#" class="code" data-code="2727" data-product="Half Price"><i class="far fa-hand-point-right"></i> Discount Code</a>
+    </div>
+
+    @section Scripts {
+        <script type="text/javascript" src="/js/client.js"></script>
+    }

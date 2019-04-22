@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PassMyData"
+             x:Class="PassMyData.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Enter Your Name" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="First Name" 
+               x:Name ="firstlbl"
+               HorizontalOptions="CenterAndExpand"
+               TextColor="DarkBlue"
+               Font="Bold,18"
+                />
+        <Entry x:Name ="textEntry"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"
+               WidthRequest="200"
+               VerticalOptions="CenterAndExpand" />
+        <Label Text="MIddle Name" 
+               x:Name ="middlelbl"
+               HorizontalOptions="CenterAndExpand"
+               TextColor="DarkBlue"
+               Font="Bold,18"
+                />
+        <Entry x:Name ="textEntry2"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"
+               WidthRequest="200"
+               VerticalOptions="CenterAndExpand" />
+        <Label Text="Last Name" 
+               x:Name ="lastlbl"
+               HorizontalOptions="CenterAndExpand"
+               TextColor="DarkBlue"
+               Font="Bold,18"
+                />
+        <Entry x:Name ="textEntry3"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"
+               WidthRequest="200"
+               VerticalOptions="CenterAndExpand" />
+        <Button Text="Navigate to Second Page"
+                    x:Name="NavigationButton"
+                    TextColor="DarkBlue"
+                    BackgroundColor="DarkGray"
+                    Margin="10"
+                    Clicked="NavigateButton_OnClicked"/>
+        
+    </StackLayout>
+
+</ContentPage>

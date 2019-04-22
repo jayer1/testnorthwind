@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Flashcards"
+             x:Class="Flashcards.MainPage">
+
+    <StackLayout x:Name="layout1">
+        
+        <Image x:Name ="MyImage"
+               Source="captamer"
+       WidthRequest="{OnPlatform iOS=300, Android=150}"
+       HorizontalOptions="Center">
+            <Image.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+            </Image.GestureRecognizers>
+            </Image>
+        <Label Text="True -- Swipe Image -- False" 
+           x:Name ="directions"
+               TextColor="DarkBlue"
+           HorizontalOptions="Center" />
+
+
+            <Label Text="Captain America!" 
+               x:Name ="questionAnswer"
+                   Margin="5"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"
+               Font="Bold,18"
+               VerticalOptions="CenterAndExpand" />
+        <Button Text="Next Question"
+                    x:Name="nextQuestion"
+                    TextColor="DarkBlue"
+                    BackgroundColor="DarkGray"
+                    Margin="10"
+                    Clicked="OnNextQuestionClicked"/>
+        <Button Text="New Game"
+               x:Name="newGame"
+               TextColor="DarkBlue"
+               BackgroundColor="DarkGray"
+               Margin="10"
+               Clicked="OnNewGameClicked"/> 
+                
+        
+
+
+
+
+    </StackLayout>
+
+</ContentPage>
