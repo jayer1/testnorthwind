@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:forms1="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="FinalProject.Page1" 
+             Title="TV" Icon="politic002512.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            
+            <Label Text="So You Wanna Be a News Anchor?"
+                   FontSize="Small"
+                   HorizontalOptions="Center"></Label>
+            <Label Text="Explore a Couple News Anchor Videos"
+                   TextColor="DarkBlue" 
+                   FontSize = "Micro"
+                   HorizontalOptions="Center"></Label>
+            <Button x:Name="PlayStopButton"
+                    Text="Play"
+                    Clicked="PlayStop_Clicked"/>
+            <forms1:VideoView
+                WidthRequest="200"
+                HeightRequest="130"
+                />
+            <Label x:Name="whichVideo"
+                   HorizontalOptions="Center"></Label>
+            <Grid>
+            <forms:AnimationView 
+	            x:Name="animationView" 
+	            Animation="Newspaper animation.json" 
+	            Loop="true" 
+	            AutoPlay="true"
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="End"/>
+            <forms:AnimationView 
+	            x:Name="animationView2" 
+	            Animation="2064-video-procesando.json" 
+	            Loop="true" 
+	            AutoPlay="true"
+                WidthRequest="75"
+                HeightRequest="75"
+                HorizontalOptions="Start"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

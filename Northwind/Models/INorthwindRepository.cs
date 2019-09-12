@@ -9,6 +9,7 @@ namespace Northwind.Models
         IQueryable<Discount> Discounts { get; }
         IQueryable<Customer> Customers { get; }
         IQueryable<Order> Orders { get; }
+        IQueryable<OrderDetail> OrderDetails { get; }
 
         void AddCustomer(Customer customer);
         void EditCustomer(Customer customer);

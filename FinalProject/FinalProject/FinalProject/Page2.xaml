@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Page2"
+             Title="Test" Icon="qa.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Do you know these famous TV journalists"
+                   TextColor="DarkBlue"
+                   HorizontalTextAlignment="Center"></Label>
+
+            <ListView x:Name="QuestionView"
+                  IsPullToRefreshEnabled="true"
+                  HasUnevenRows="True"
+                  SeparatorColor="Green"
+                      ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="More" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Horizontal" Padding="5">
+                                    <Image Source="{Binding DisplayImage}"
+                                           WidthRequest="{OnPlatform iOS=50, Android=50}"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding DisplayQuestion}"
+                                           AutomationProperties.IsInAccessibleTree="True"
+                                           AutomationProperties.HelpText="Tap on an item in the list to see the correct answer"
+                                           AutomationProperties.Name="Android"/>
+                                </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+            </ListView>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

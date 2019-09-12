@@ -42,14 +42,31 @@
                         <a class="dropdown-item" asp-controller="Customer" asp-action="Account"><i class="fas fa-user"></i> Account</a>
                         @if (User?.Identity?.IsAuthenticated ?? false)
                         {
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                         }
                         else
                         {
                             <a class="dropdown-item" asp-controller="Customer" asp-action="Register"><i class="far fa-address-card"></i> Register</a>
-                            <a class="dropdown-item" asp-controller="Account" asp-action="Login"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+                            @*<a class="dropdown-item" asp-controller="Account" asp-action="Login"><i class="fas fa-sign-in-alt"></i> Sign In</a>*@
                         }
                     </div>
+                </li>
+<<<<<<< HEAD
+                <!--I added this for Orders drop down-->
+=======
+>>>>>>> 4eb4035997ec1071d72431d4216e0571285cccce
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="orderDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-users"></i> Orders
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="orderDropdown">
+                        <a class="dropdown-item" asp-controller="Order" asp-action="Index"><i class="fas fa-list-ul"></i> Browse Orders</a>
+                    </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4eb4035997ec1071d72431d4216e0571285cccce
                 </li>
             </ul>
             @if (User?.Identity?.IsAuthenticated ?? false)

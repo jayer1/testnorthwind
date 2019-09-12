@@ -10,11 +10,16 @@ namespace Northwind.Models
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
         public int EmployeeID { get; set; }
-        public DateTime OrderDate { get; set; }
-        public DateTime RequiredDate { get; set; }
-        public DateTime ShippedDate { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? RequiredDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+<<<<<<< HEAD
         public int ShipVia { get; set; }
         public decimal Freight { get; set; }
+=======
+        public int? ShipVia { get; set; }
+        public decimal? Freight { get; set; }
+>>>>>>> 4eb4035997ec1071d72431d4216e0571285cccce
         public string ShipName { get; set; }
         public string ShipAddress { get; set; }
         public string ShipCity { get; set; }

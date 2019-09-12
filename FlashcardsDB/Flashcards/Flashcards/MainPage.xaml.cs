@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-
 namespace Flashcards
 {
     public partial class MainPage : ContentPage
@@ -15,7 +14,7 @@ namespace Flashcards
         //int swipeCount = 0;
         int countTries = 0;
        
-        ArrayList myList = new ArrayList();
+        List<FlashcardsItem> myList = new List<FlashcardsItem>();
         int i = 0;
         int countCorrect = 0;
         FlashcardsDatabase Database = App.Database;
@@ -25,10 +24,13 @@ namespace Flashcards
         {
             InitializeComponent();
             //myList = (FlashcardsItem)Database.GetItemsAsync();
+            //myList = await Database.GetItemsAsync();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
             myList = await Database.GetItemsAsync();
-
-
-
             questionAnswer.Text = ((FlashcardsItem)myList[0]).Question;
             MyImage.Source = ((FlashcardsItem)myList[0]).imageName;
             //questionAnswer.Text = first.Question;
@@ -38,9 +40,9 @@ namespace Flashcards
             nextQuestion.IsVisible = false;
             directions.IsVisible = true;
             countTries = 1;
-            
-
         }
+
+        
 
         void OnSwiped(object sender, SwipedEventArgs e)
         {

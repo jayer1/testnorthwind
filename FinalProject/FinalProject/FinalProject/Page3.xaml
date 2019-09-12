@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="FinalProject.Page3"
+             Title="Info" Icon="icon1.PNG">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Explore the links below for more information on becoming a TV news anchor:"
+                   TextColor="Black"
+                   Margin="10"
+                   HorizontalOptions="Center"></Label>
+            <ContentView BackgroundColor="#1C5690"
+                     Margin="10"
+                     Padding="10"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label 
+                    x:Name="LabelGoToWebPageTapped"
+                    Margin="2"
+                    FontSize="Micro"
+                    HorizontalOptions="Start"
+                    Text="Learn To Be A News Anchor"
+                    TextColor="WhiteSmoke"
+                    TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToWebPageTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label 
+                x:Name="LabelGoToWebPageTapped2"
+                Grid.Row="1"
+                Margin="2"
+                FontSize="Micro"
+                HorizontalOptions="Start"
+                Text="A Day in the Life of a News Anchor"
+                TextColor="WhiteSmoke"
+                TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToWebPageTapped2"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label 
+                x:Name="LabelGoToWebPageTapped3"
+                Margin="2"
+                FontSize="Micro"
+                HorizontalOptions="Start"
+                Text="WikiHow: Become a TV News Anchor"
+                TextColor="WhiteSmoke"
+                TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToWebPageTapped3"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                
+            </ContentView>
+            <forms:AnimationView 
+	            x:Name="animationView" 
+	            Animation="291-searchask-loop.json" 
+	            Loop="true" 
+	            AutoPlay="true"
+                WidthRequest="100"
+                HeightRequest="100"/>
+            <Label 
+                x:Name="Label1"
+                Grid.Row="1"
+                Margin="10"
+                HorizontalOptions="Center"
+                Text="Thanks for using our App!!!"
+                TextColor="Black">
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
